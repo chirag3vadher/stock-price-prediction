@@ -1,0 +1,4 @@
+/data/
+/models/model.pkl
+/models/X_test.npy
+/models/y_test.npy
