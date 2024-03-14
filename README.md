@@ -76,6 +76,15 @@ To run the project, follow these steps:
 ### Deployment
 - Once the model was trained and evaluated, it was deployed for predictions on new stock data in real-time.
 
+## Results
+- The performance of the trained models is evaluated using appropriate metrics, and the best-performing model is selected for deployment.
+- Insights and conclusions drawn from the model predictions and evaluation results are documented.
+
+## Conclusion
+The Stock Price Prediction project demonstrates the application of machine learning techniques to forecast stock prices. 
+By following established standards and best practices, the project aims to deliver accurate predictions and provide valuable insights for investors and traders in the financial markets.
+
+
 ## Credits
 
-This project was created by [Your Name].
+This project was created by Chirag Vadher.
