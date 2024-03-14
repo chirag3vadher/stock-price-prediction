@@ -1,3 +1,29 @@
+"""
+Stock price prediction: data_preprocessing.py
+
+Dependencies:
+    - pandas: library for data manipulation and analysis
+    - sklearn: library for machine learning models
+    - logging: helps to create logs for execution
+
+Usage:
+    1. Ensure that you have the required dependencies installed.
+    2. Import this module into your code to preprocess historical stock price data.
+
+Author Information:
+    Name: Chirag Vadher
+    Date: 12-03-2024
+    Contact:
+
+Abstract/Description:
+    This module contains functions for cleaning, handling missing values, and normalizing historical stock price data.
+
+Change Log:
+    - 12-03-2024: Initial creation.
+    - [Date]: Updated with new data or changes. -- Use this when updated
+"""
+
+
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split

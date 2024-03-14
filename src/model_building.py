@@ -1,9 +1,30 @@
-# src/model_building.py
+"""
+Stock price prediction: model_building.py
+
+Dependencies:
+    - sklearn: library for machine learning models
+    - logging: helps to create logs for execution
+
+Usage:
+    1. Ensure that you have the required dependencies installed.
+    2. Import this module into your code to train machine learning models.
+
+Author Information:
+    Name: Chirag Vadher
+    Date: 12-03-2024
+    Contact:
+
+Abstract/Description:
+    This module contains functions for training machine learning models such as Linear Regression, Random Forest, and LSTM.
+
+Change Log:
+    - 12-03-2024: Initial creation.
+    - [Date]: Updated with new data or changes. -- Use this when updated
+"""
+
 
 from sklearn.linear_model import LinearRegression
 from sklearn.ensemble import RandomForestRegressor
-# from keras.models import Sequential
-# from keras.layers import LSTM, Dense
 from src.utils import logger
 
 

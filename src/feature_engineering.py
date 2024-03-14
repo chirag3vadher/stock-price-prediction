@@ -1,7 +1,34 @@
+"""
+Stock price prediction: feature_engineering.py
+
+Dependencies:
+    - pandas: library for data manipulation and analysis
+    - numpy: library for numerical computations
+    - logging: helps to create logs for execution
+
+Usage:
+    1. Ensure that you have the required dependencies installed.
+    2. Import this module into your code to calculate financial indicators from historical stock price data.
+
+Author Information:
+    Name: Chirag Vadher
+    Date: 12-03-2024
+    Contact:
+
+Abstract/Description:
+    This module contains functions for calculating financial indicators such as moving averages and RSI from historical stock price data.
+
+Change Log:
+    - 12-03-2024: Initial creation.
+    - [Date]: Updated with new data or changes. -- Use this when updated
+"""
+
+
 import pandas as pd
 import os
 from ta import add_all_ta_features
 from src.utils import logger, PWD
+
 
 def calculate_technical_indicators(df):
     """

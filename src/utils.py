@@ -1,3 +1,29 @@
+"""
+Stock price prediction : src.utils.py
+
+Dependencies:
+    - Joblib: provides utilities for saving and loading Python objects
+    - logging: helps to create the logs for execution
+    - datetime - to handle date time
+    - os - to execute os commands
+
+Usage:
+    1. Ensure that you have the required dependencies installed.
+
+    Author Information:
+    Name: Chirag Vadher
+    Date: 12-03-2024
+    Contact:
+
+Abstract/Description:
+
+    This code provides the utility functions for loading file, saving file and making prediction on data
+
+Change Log:
+    - 12 feb 2024: Initial creation.
+    - [Date]: Updated with new data. -- Use this when updated
+
+"""
 
 import joblib
 import logging
@@ -9,10 +35,12 @@ PWD = os.path.dirname(__file__)
 TIMESTAMP = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
 LOG_FILE = f"{PWD}/../data/logger/logs_{TIMESTAMP}.log"
 
-logging.basicConfig(filename=LOG_FILE, level=logging.INFO, format='%(asctime)s - %(module)s - %(levelname)s - %(message)s')
+logging.basicConfig(filename=LOG_FILE, level=logging.INFO,
+                    format='%(asctime)s - %(module)s - %(levelname)s - %(message)s')
 
 # Get the logger object
 logger = logging.getLogger(__name__)
+
 
 def save_model(model, filename):
     """
@@ -27,6 +55,7 @@ def save_model(model, filename):
         logger.info(f"Model saved to {filename}")
     except Exception as e:
         logger.error(f"Error saving model to {filename}: {e}")
+
 
 def load_model(filename):
     """
@@ -45,6 +74,7 @@ def load_model(filename):
     except Exception as e:
         logger.error(f"Error loading model from {filename}: {e}")
         return None
+
 
 def make_prediction(model, X_new):
     """

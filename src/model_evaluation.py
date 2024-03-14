@@ -1,3 +1,27 @@
+"""
+Stock price prediction: model_evaluation.py
+
+Dependencies:
+    - sklearn: library for machine learning models
+    - logging: helps to create logs for execution
+
+Usage:
+    1. Ensure that you have the required dependencies installed.
+    2. Import this module into your code to evaluate the performance of machine learning models.
+
+Author Information:
+    Name: Chirag Vadher
+    Date: 12-03-2024
+    Contact:
+
+Abstract/Description:
+    This module contains functions for evaluating the performance of machine learning models using metrics like MSE or MAPE.
+
+Change Log:
+    - 12-03-2024: Initial creation.
+    - [Date]: Updated with new data or changes. -- Use this when updated
+"""
+
 
 from sklearn.metrics import mean_squared_error
 from sklearn.model_selection import GridSearchCV

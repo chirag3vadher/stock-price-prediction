@@ -1,3 +1,30 @@
+"""
+Stock price prediction: data_collection.py
+
+Dependencies:
+    - yfinance: provides utilities for fetching historical stock price data
+    - logging: helps to create logs for execution
+    - pandas: library for data manipulation and analysis
+    - datetime: module for handling date and time objects
+
+Usage:
+    1. Ensure that you have the required dependencies installed.
+    2. Import this module into your code to fetch historical stock price data.
+
+Author Information:
+    Name: Chirag Vadher
+    Date: 12-03-2024
+    Contact:
+
+Abstract/Description:
+    This module contains functions for fetching historical stock price data using the yfinance library.
+
+Change Log:
+    - 12-03-2024: Initial creation.
+    - [Date]: Updated with new data or changes. -- Use this when updated
+"""
+
+
 import yfinance as yf
 import os
 from src.utils import logger, PWD

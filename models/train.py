@@ -1,3 +1,27 @@
+"""
+Stock price prediction: train.py
+
+Dependencies:
+    - logging: helps to create logs for execution
+
+Usage:
+    1. Ensure that you have the required dependencies installed.
+    2. Execute this module to train machine learning models using the provided data.
+
+Author Information:
+    Name: Chirag Vadher
+    Date: 12-03-2024
+    Contact:
+
+Abstract/Description:
+    This module contains code to train machine learning models such as Linear Regression, Random Forest, or LSTM using the provided data.
+
+Change Log:
+    - 12-03-2024: Initial creation.
+    - [Date]: Updated with new data or changes. -- Use this when updated
+"""
+
+
 from src import data_collection, feature_engineering, data_preprocessing, model_building, model_evaluation
 from src.utils import save_model, logger
 
