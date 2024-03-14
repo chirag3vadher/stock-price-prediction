@@ -7,10 +7,10 @@ This project aims to develop a machine learning model to predict stock prices us
 The project involves the following key steps:
 
 1. **Data Collection**: Fetch historical stock price data using the `yfinance` library.
-2. **Feature Engineering**: Calculate financial indicators such as moving averages, RSI (Relative Strength Index), etc., from the historical data.
+2. **Feature Engineering**: Calculate financial indicators from the historical data.
 3. **Data Preprocessing**: Clean the data, handle missing values, and normalize the data.
-4. **Model Building**: Train machine learning models such as Linear Regression, Random Forest, or LSTM on the training data.
-5. **Model Evaluation**: Evaluate the models on the validation set using metrics like MSE or MAPE.
+4. **Model Building**: Train machine learning models such as Linear Regression, Random Forest on the training data.
+5. **Model Evaluation**: Evaluate the models on the validation set using metrics like MSE.
 6. **Hyperparameter Tuning**: Fine-tune the model parameters to improve performance.
 7. **Final Evaluation**: Test the final model on the test set to assess its performance.
 8. **Deployment**: Deploy the model for predictions on new stock data.
@@ -48,7 +48,7 @@ stock_price_prediction
 To run the project, follow these steps:
 
 1. Install the required dependencies by running `pip install -r requirements.txt`.
-2. Execute the `main.py` script located in the `src/` directory to run the entire pipeline.
+2. Execute the `train.py` and `deploy.py` script located in the `models/` directory to run the entire pipeline.
 
 ## Detailed Explanation
 
@@ -56,7 +56,7 @@ To run the project, follow these steps:
 - We chose the `yfinance` library for fetching historical stock price data due to its ease of use and extensive coverage of stock data.
 
 ### Feature Engineering
-- We calculated financial indicators like following
+- We calculated financial indicators using the `Ta` library
   - Trend Volatility Ratio (TVR)
   - Momentum Strength Index (MSI)
   - Adaptive Trend Indicator (ATI)
@@ -79,7 +79,7 @@ To run the project, follow these steps:
 - We experimented with two  machine learning models including Linear Regression and random forest to determine the best approach for stock price prediction.
 
 ### Model Evaluation
-- Model evaluation was performed using metrics like MSE and MAPE on a validation set to assess the performance of the trained models.
+- Model evaluation was performed using metrics like MSE on a validation set to assess the performance of the trained models.
 
 ### Hyperparameter Tuning
 - Hyperparameter tuning was conducted to fine-tune the model parameters and improve performance using techniques like Grid Search.

@@ -2,6 +2,7 @@
 Stock price prediction: feature_engineering.py
 
 Dependencies:
+    - ta : Technical Analysis library useful to do feature engineering from financial time series datasets (Open, Close, High, Low, Volume)
     - pandas: library for data manipulation and analysis
     - numpy: library for numerical computations
     - logging: helps to create logs for execution
