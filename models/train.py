@@ -1,11 +1,10 @@
 from src import data_collection, feature_engineering, data_preprocessing, model_building, model_evaluation
 from src.utils import save_model, logger
-import numpy as np
 
 
 def train_model(symbol, start_date, end_date):
     """
-  This function trains a model using the provided data.
+  This function trains a model using the provided data does the finetuning and saves the best model.
 
   Args:
       symbol (str): Stock symbol
@@ -25,24 +24,39 @@ def train_model(symbol, start_date, end_date):
         feature_engineering.save_processed_data(features,f"processed_{symbol}_{start_date}_{end_date}")
 
         # Preprocess the data
-        X_train, y_train, X_test, y_test = data_preprocessing.preprocess_data(features)
+        X_train, y_train, X_val, y_val = data_preprocessing.preprocess_data(features)
 
         # Train the model
         models = []
         models.append(model_building.train_linear_regression(X_train, y_train))
         models.append(model_building.train_random_forest(X_train, y_train))
-        X_train_lstm = X_train.values.reshape((X_train.shape[0], X_train.shape[1], 1))  # Reshape for LSTM
-        models.append(model_building.train_lstm(X_train_lstm, y_train))
 
-        # validate_the_model
-        model_evaluation.evaluate_model(model, X_test, y_test)
+        #validate the model
+        best_model = model_evaluation.select_best_model(models, X_val, y_val)
+        logger.info(f"Best model is {type(best_model).__name__}")
+        tuned_model = None
+        if best_model is not None:
+            # Hyperparameter Tuning
+            if type(best_model).__name__ == "RandomForestRegressor":
+                param_grid = {'n_estimators': [100, 200, 300],
+                              'max_depth': [None, 10, 20]}
+                tuned_model = model_evaluation.tune_hyperparameters(best_model, param_grid, X_train, y_train)
+                logger.info("Tuned Random Forest Model:", tuned_model.best_params_)
+            elif type(best_model).__name__ == "LinearRegression":
+                param_grid = {'fit_intercept': [True, False]}
+                tuned_model = model_evaluation.tune_hyperparameters(best_model, param_grid, X_train,y_train)
+                logger.info("Tuned Linear Regression Model:", tuned_model.best_params_)
+            else:
+                logger.info("Best model does not support hyperparameter tuning.")
+        else:
+            logger.info("No best model selected.")
 
-        # Save the trained model
-        model_filename = "model.pkl"
-        save_model(model, model_filename)
-        print("Model saved successfully")
+        # Save the tuned model
+        if tuned_model is not None:
+            model_filename = "model.pkl"
+            save_model(tuned_model, model_filename)
+            logger.info("tuned model saved successfully")
 
-        return model
     except Exception as e:
         logger.error(f"Error tarining the model {symbol}: {e}")
         return None

@@ -1,6 +1,6 @@
 import yfinance as yf
 import os
-from src.utils import logger, pwd
+from src.utils import logger, PWD
 
 def fetch_stock_data(symbol, start_date, end_date):
     """
@@ -32,10 +32,10 @@ def save_raw_data(data, filename):
     """
     try:
         # Create directory if it doesn't exist
-        os.makedirs(f"{pwd}/../data/raw", exist_ok=True)
+        os.makedirs(f"{PWD}/../data/raw", exist_ok=True)
 
         # Save data to CSV file
-        filepath = os.path.join(f"{pwd}/../data/raw", filename)
+        filepath = os.path.join(f"{PWD}/../data/raw", filename)
         data.to_csv(filepath, index=False)
 
         logger.info(f"Data saved successfully to {filepath}")

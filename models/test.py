@@ -4,7 +4,7 @@ import pandas as pd
 import numpy as np
 
 
-def evaluate_model(model_filename, X_test, y_test):
+def test_model(model_filename, X_test, y_test):
     """
   This function loads a saved model and evaluates its performance on test data.
 
@@ -34,5 +34,5 @@ if __name__ == "__main__":
     model_filename = "model.pkl"
     X_test = pd.DataFrame(np.load("X_test.npy"))
     y_test = pd.Series(np.load("y_test.npy"))
-    evaluate_model(model_filename, X_test, y_test)
+    test_model(model_filename, X_test, y_test)
     print("---------test.py executed successfully-----------")

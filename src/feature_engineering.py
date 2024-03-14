@@ -1,7 +1,7 @@
 import pandas as pd
 import os
 from ta import add_all_ta_features
-from src.utils import logger, pwd
+from src.utils import logger, PWD
 
 def calculate_technical_indicators(df):
     """
@@ -33,10 +33,10 @@ def save_processed_data(data, filename):
     """
     try:
         # Create directory if it doesn't exist
-        os.makedirs(f"{pwd}/../data/processed", exist_ok=True)
+        os.makedirs(f"{PWD}/../data/processed", exist_ok=True)
 
         # Save data to CSV file
-        filepath = os.path.join(f"{pwd}/../data/processed", filename)
+        filepath = os.path.join(f"{PWD}/../data/processed", filename)
         data.to_csv(filepath, index=False)
 
         logger.info(f"Data saved successfully to {filepath}")

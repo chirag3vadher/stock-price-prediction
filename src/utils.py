@@ -4,17 +4,15 @@ import logging
 import datetime
 import os
 
-pwd = os.path.dirname(__file__)
+# Configure logging
+PWD = os.path.dirname(__file__)
+TIMESTAMP = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+LOG_FILE = f"{PWD}/../data/logger/logs_{TIMESTAMP}.log"
+
+logging.basicConfig(filename=LOG_FILE, level=logging.INFO, format='%(asctime)s - %(module)s - %(levelname)s - %(message)s')
 
 # Get the logger object
 logger = logging.getLogger(__name__)
-
-# Create a timestamp for the current session
-timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-
-# Configure logging
-log_file = f"{pwd}/../data/logger/logs_{timestamp}.log"
-logging.basicConfig(filename=log_file, level=logging.INFO)
 
 def save_model(model, filename):
     """

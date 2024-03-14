@@ -1,4 +1,3 @@
-# src/model_evaluation.py
 
 from sklearn.metrics import mean_squared_error
 from sklearn.model_selection import GridSearchCV
@@ -20,8 +19,8 @@ def evaluate_model(model, X_val, y_val):
     try:
         y_pred = model.predict(X_val)
         mse = mean_squared_error(y_val, y_pred)
-        logger.info("Model evaluated successfully")
-        logger.info(f"model MSE is {mse}")
+        logger.info(f"{type(model).__name__} evaluated successfully")
+        logger.info(f"{type(model).__name__} is {mse}")
         return mse
     except Exception as e:
         logger.error(f"Error evaluating model: {e}")
