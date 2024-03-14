@@ -5,29 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5a6ad839-5754-44bb-9ee3-72ed159dbef1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/stock_price_prediction.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/train.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data_collection.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data_preprocessing.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/feature_engineering.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model_building.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model_evaluation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_data_collection.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_data_preprocessing.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_feature_engineering.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_model_evaluation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_model_training.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model_building.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/model_building.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -28,7 +28,11 @@ def train_model(symbol, start_date, end_date):
         X_train, y_train, X_test, y_test = data_preprocessing.preprocess_data(features)
 
         # Train the model
-        model = model_building.train_random_forest(X_train, y_train)
+        models = []
+        models.append(model_building.train_linear_regression(X_train, y_train))
+        models.append(model_building.train_random_forest(X_train, y_train))
+        X_train_lstm = X_train.values.reshape((X_train.shape[0], X_train.shape[1], 1))  # Reshape for LSTM
+        models.append(model_building.train_lstm(X_train_lstm, y_train))
 
         # validate_the_model
         model_evaluation.evaluate_model(model, X_test, y_test)
